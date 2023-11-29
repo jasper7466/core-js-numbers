@@ -68,8 +68,11 @@ function getAverage(value1, value2) {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-function getDistanceBetweenPoints(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getDistanceBetweenPoints(x1, y1, x2, y2) {
+  const x = Math.max(x1, x2) - Math.min(x1, x2);
+  const y = Math.max(y1, y2) - Math.min(y1, y2);
+
+  return Math.sqrt(x ** 2 + y ** 2);
 }
 
 /**
